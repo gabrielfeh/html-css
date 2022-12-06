@@ -13,6 +13,21 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(230, 230, 230);
+            border: 1px solid black;
+        }
+
+        tbody > tr:nth-child(2n) /* even (par) - odd(impar) - e tem o "numero"+n que vai ser a cada quantas linhas vai ser zebrado*/
+        {
+            background-color: rgb(170, 169, 169);
+            color: white;
         }
 
         td.num{
@@ -22,6 +37,12 @@
         td, th{
             border: 1px solid black;
             padding: 10px;
+        }
+
+        thead > tr > th{/* serve apra fixar o cabeçalho a rolagem da planilha*/
+            position: sticky;
+            top: 0;
+            background-color: gray;
         }
         thead, tfoot{
             background-color: gray;
@@ -42,10 +63,11 @@
              TR, TD, TH
     -->
     <table>
+        <caption>População das unidades federativas.</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width:150px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -76,7 +98,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>119.037.043</strong></td>
             </tr>
         </tfoot>
