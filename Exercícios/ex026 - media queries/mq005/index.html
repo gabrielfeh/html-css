@@ -7,8 +7,9 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
@@ -41,6 +42,7 @@
             <p>
                 Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Mé faiz elementum girarzis, nisi eros vermeio.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Atirei o pau no gatis, per gatis num morreus.Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Mé faiz elementum girarzis, nisi eros vermeio.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Atirei o pau no gatis, per gatis num morreus.
             </p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit debitis doloremque dicta minima quasi sequi, veritatis at explicabo fugiat deleniti? Earum temporibus esse veritatis perspiciatis error maiores, minima quod quidem.</p>
         </article>
     </main>
     
@@ -52,6 +54,13 @@
                 itens.style.display = 'block'
             }
         }
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            }else{itens.style.display = 'none'
+            }
+        }
+        
     </script>
 </body>
 </html>
